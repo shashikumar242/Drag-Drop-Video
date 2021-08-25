@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.main-div {
+  width: 100%;
+  margin: 20px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.groups-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.group {
+  width: 45vw;
+  height: 45vh;
+  overflow: auto;
+  display: inline-block;
+  background: rgb(17, 75, 102);
+  border-radius: 30px;
+  position: relative;
+}
+
+.title {
   color: white;
+  margin: 0;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.item.current {
+  background: bisque;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  border-radius: 5px;
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+video {
+  object-fit: cover;
+  pointer-events: all;
+}
+
+.div-zone-1 .video-class {
+  color: red;
+  margin-left: 400px;
+}
+.div-zone-3 .video-class {
+  color: red;
+  margin-left: 400px;
+}
+@media screen and (max-width: 480px) {
+  video {
+    width: 100%;
+    height: 251px;
   }
-  to {
-    transform: rotate(360deg);
+  .div-zone-1 .video-class {
+    color: red;
+    margin-left: 0px;
+  }
+  .div-zone-3 .video-class {
+    color: red;
+    margin-left: 0px;
   }
 }
